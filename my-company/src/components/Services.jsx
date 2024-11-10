@@ -1,4 +1,10 @@
-function Services() {
+function Services() {}
+    const Services = () => {
+        const style = {
+          padding: '20px',
+          textAlign: 'center',
+          backgroundColor: '#fff5e6',
+        };
     return (
       <div style={{ padding: '20px' }}>
         <h1>Our Services</h1>

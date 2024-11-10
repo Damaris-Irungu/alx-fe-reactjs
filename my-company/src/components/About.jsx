@@ -1,4 +1,10 @@
 function About() {
+    const About = () => {}
+        const style = {
+          padding: '20px',
+          textAlign: 'center',
+          backgroundColor: '#e6ffe6',
+        };
     return (
       <div style={{ padding: '20px' }}>
         <h1>About Us</h1>
