@@ -7,9 +7,19 @@ import Header from './Header'
 import MainContent from './MainContent'
 import Footer from './Footer'
 import UserProfile from './UserProfile'
-
+import ProfilePage from './ProfilePage'
+import UserInfo from './UserInfo'
+import UserDetails from './UserDetails'
+import UserContext from './UserContext'
 
 function App() {
+  const userData = { name: "Jane Doe", email: "jane.doe@example.com" };
+
+  return (
+    <UserContext.Provider value={userData}>
+  <ProfilePage userData={userData} />;
+  </UserContext.Provider>
+  )
   const [count, setCount] = useState(0)
 
   return (
@@ -43,6 +53,10 @@ function App() {
       <MainContent />
       <Footer />
       <UserProfile/>
+      <ProfilePage/>
+      <UserInfo/>
+      <UserDetails/>
+      <UserContext/>
     </>
   )
 }
