@@ -1,6 +1,7 @@
 import { useRecipeStore } from './recipeStore';
 
 const DeleteRecipeButton = ({ id }) => {
+    const navigate = useNavigate();
   const deleteRecipe = useStore((state) => state.deleteRecipe);
 
   const handleDelete = () => {
