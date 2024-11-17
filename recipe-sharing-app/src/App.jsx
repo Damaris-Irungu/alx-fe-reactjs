@@ -4,6 +4,9 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import RecipeList from './RecipeList'
 import AddRecipeForm from './AddRecipeForm'
+import RecipeDetails from './RecipeDetails'
+import EditRecipeForm from './EditRecipeForm'
+import DeleteRecipeButton from './DeleteRecipeButton'
 
 function App() {
   const [count, setCount] = useState(0)
