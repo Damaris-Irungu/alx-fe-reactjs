@@ -9,6 +9,8 @@ import RecipeDetails from './RecipeDetails'
 import EditRecipeForm from './EditRecipeForm'
 import DeleteRecipeButton from './DeleteRecipeButton'
 import SearchBar from './SearchBar'
+import FavoritesList from './FavoritesList'
+import RecommendationsList from './RecommendationsList'
 
 function App() {
   const [count, setCount] = useState(0)
