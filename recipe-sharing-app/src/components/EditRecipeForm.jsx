@@ -1,4 +1,4 @@
-import useStore from './recipeStore';
+import { useRecipeStore } from './recipeStore';
 
 const EditRecipeForm = () => {
   const { id } = useParams();
@@ -14,7 +14,7 @@ const EditRecipeForm = () => {
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    event.preventDefault();
     updateRecipe(recipe.id, updatedRecipe);
     navigate(`/recipe/${recipe.id}`);
   };
