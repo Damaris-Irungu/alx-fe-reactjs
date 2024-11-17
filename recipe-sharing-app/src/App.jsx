@@ -11,7 +11,8 @@ import DeleteRecipeButton from './DeleteRecipeButton'
 
 function App() {
   const [count, setCount] = useState(0)
-  
+  <Router>
+      <Route path="/" element={<RecipeDetails />} />
 
   return (
     <>
