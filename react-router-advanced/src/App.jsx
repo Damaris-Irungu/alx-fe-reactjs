@@ -4,11 +4,13 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Profile from './Profile';
+import blogPost from './blogPost';
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="profile/*" element={<Profile />} />
+        <Route path="post/:postId" element={<blogPostPost />} />
       </Routes>
     </Router>
   );
