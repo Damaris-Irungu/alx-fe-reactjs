@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Profile from './Profile';
-import blogPost from './blogPost';
+import BlogPost from './BlogPost';
 import ProtectedRoute from './ProtectedRoute';
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false); // Simulate login state

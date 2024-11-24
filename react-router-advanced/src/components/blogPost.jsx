@@ -6,4 +6,4 @@ const blogPost = () => {
   return <div>Showing details for blogpost {postId}</div>;
 };
 
-export default blogPost;
+export default BlogPost;
