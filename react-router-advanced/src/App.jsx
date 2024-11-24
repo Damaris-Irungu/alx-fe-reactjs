@@ -15,7 +15,7 @@ function App() {
             <ProtectedRoute isAuthenticated={isAuthenticated}>
               <Profile />
             </ProtectedRoute>
-        <Route path="/blog/:Id" element={<BlogPost />} />
+        <Route path=["/blog/:Id"] element={<BlogPost />} />
       </Routes>
     </Router>
   );
