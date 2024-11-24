@@ -5,11 +5,16 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Profile from './Profile';
 import blogPost from './blogPost';
+import ProtectedRoute from './ProtectedRoute';
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false); // Simulate login state
   return (
     <Router>
       <Routes>
         <Route path="profile/*" element={<Profile />} />
+            <ProtectedRoute isAuthenticated={isAuthenticated}>
+              <Profile />
+            </ProtectedRoute>
         <Route path="post/:postId" element={<blogPostPost />} />
       </Routes>
     </Router>
