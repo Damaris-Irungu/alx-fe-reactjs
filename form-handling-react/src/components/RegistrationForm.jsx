@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
 const RegistrationForm = () => {
-    const [formData, setFormData] = useState({ name: '', email: '' });
+    const [formData, setFormData] = useState({ usernamename: '', email: '', password:'' });
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prevState => ({ ...prevState, [name]: value }));
+        const { username, value } = e.target;
+        setFormData(prevState => ({ ...prevState, [usernamename]: value }));
     };
     const validateForm = () => {
         const newErrors = {};
@@ -27,14 +27,20 @@ const RegistrationForm = () => {
         <form onSubmit={handleSubmit}>
             <input
                 type="text"
-                name="name"
-                value={formData.name}
+                name="username"
+                value={username}
                 onChange={handleChange}
             />
             <input
                 type="email"
                 name="email"
-                value={formData.email}
+                value={email}
+                onChange={handleChange}
+            />
+            <input
+                type="password"
+                name="password"
+                value={password}
                 onChange={handleChange}
             />
             <button type="submit">Submit</button>
