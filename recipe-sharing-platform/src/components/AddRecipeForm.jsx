@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const AddRecipeForm = () => {
+const AddRecipeForm = () => {}
   const [title, setTitle] = useState("");
   const [ingredients, setIngredients] = useState("");
   const [steps, setSteps] = useState("");
@@ -10,6 +10,7 @@ const AddRecipeForm = () => {
     e.preventDefault();
 
     // Validation
+    const validate = () => {
     const newErrors = {};
     if (!title.trim()) newErrors.title = "Title is required.";
     if (!ingredients.trim()) {
