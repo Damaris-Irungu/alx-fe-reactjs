@@ -15,5 +15,20 @@ const fetchUserData = async (username) => {
     throw error;
   }
 };
+const fetchAdvancedSearch = async ({ username, location, minRepos }) => {
+  let query = '';
+
+  if (username) query += `${username} in:login `;
+  if (location) query += `location:${location} `;
+  if (minRepos) query += `repos:>${minRepos}`;
+
+  try {
+    const response = await axios.get(`${GITHUB_SEARCH_API}?q=${query.trim()}`);
+    return response.data;
+  } catch (error) {
+    console.error('Error during advanced search', error);
+    throw error;
+  }
+};
 
 export default fetchUserData;
