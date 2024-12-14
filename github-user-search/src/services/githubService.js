@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const GITHUB_API_URL = 'https://api.github.com/users/';
+const GITHUB_API_URL = 'https://api.github.com/users/{username}';
 
-const getUserData = async (username) => {
+const fetchUserData = async (username) => {
   try {
     const response = await axios.get(`${GITHUB_API_URL}${username}`, {
       headers: {
@@ -16,4 +16,4 @@ const getUserData = async (username) => {
   }
 };
 
-export default getUserData;
+export default fetchUserData;
