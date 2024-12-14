@@ -23,7 +23,7 @@ const fetchAdvancedSearch = async ({ username, location, minRepos }) => {
   if (minRepos) query += `repos:>${minRepos}`;
 
   try {
-    const response = await axios.get(`${GITHUB_SEARCH_API}?q=${query.trim()}`);
+    const response = await axios.get(`https://api.github.com/search/users?q={query.trim()}`);
     return response.data;
   } catch (error) {
     console.error('Error during advanced search', error);
